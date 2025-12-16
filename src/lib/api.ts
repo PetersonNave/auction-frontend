@@ -3,7 +3,7 @@ import Cookies from 'js-cookie';
 import { User } from '@/types';
 
 const api = axios.create({
-  baseURL: process.env.BACKEND_URL || 'http://localhost:3000',
+  baseURL: process.env.BACKEND_URL || 'https://auction-backend-58a558f43ae3.herokuapp.com',
 });
 
 api.interceptors.request.use((config) => {
