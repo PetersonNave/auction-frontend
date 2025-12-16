@@ -1,0 +1,904 @@
+{
+	"info": {
+		"_postman_id": "7c1ee7bd-9ff9-48f2-be3b-ca5b7a231ab5",
+		"name": "Auction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23987484"
+	},
+	"item": [
+		{
+			"name": "Autenticação",
+			"item": [
+				{
+					"name": "registro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"fulano\",\r\n  \"password\": \"senha123\",\r\n  \"displayName\": \"Fulano\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "registro",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"fulano\",\r\n  \"password\": \"senha123\",\r\n  \"displayName\": \"Fulano\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "159"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9f-GhD1ju5huX+DwTyNFjsZYFUk2W4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 15 Dec 2025 13:59:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"username\": \"fulano\",\n    \"displayName\": \"Fulano\",\n    \"password\": \"$2b$10$C3W2qAGwtE9iAoXtae1QU.nsMFErPFkoa3RL2HEcr4YLxi7gDRj2.\",\n    \"_id\": \"69401448d706962525a6c26e\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"fulano\",\r\n  \"password\": \"senha123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"fulano\",\r\n  \"password\": \"senha123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "98"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "36"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "332"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14c-LHy6pWpd8rC80WVAGYz/Oca+0cc\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 15 Dec 2025 14:59:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ1bGFubyIsInN1YiI6IjY5NDAxNDQ4ZDcwNjk2MjUyNWE2YzI2ZSIsImRpc3BsYXlOYW1lIjoiRnVsYW5vIiwiaWF0IjoxNzY1ODEwNzg3LCJleHAiOjE3NjU4MTQzODd9.LWMjb4-cP5saJrtO-Yv97H7X7HEhNcu1kDNAWPzvlPk\",\n    \"user\": {\n        \"id\": \"69401448d706962525a6c26e\",\n        \"username\": \"fulano\",\n        \"displayName\": \"Fulano\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Lances",
+			"item": [
+				{
+					"name": "Dar lance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"amount\": 110000,\r\n  \"currentVersion\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auction/694020fed6cebd593d728ba3/bid",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auction",
+								"694020fed6cebd593d728ba3",
+								"bid"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Dar lance",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"amount\": 120000,\r\n  \"currentVersion\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auction/6940243e22c0fed24ed6bb14/bid",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auction",
+										"6940243e22c0fed24ed6bb14",
+										"bid"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "96"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "18"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3d-PWBkbMfJT2EIh9ViBXFj7PPGxRQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 15 Dec 2025 15:08:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"price\": 120000,\n    \"bidder\": \"Fulano\",\n    \"version\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Visualizar lances",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"amount\": 6900,\r\n  \"currentVersion\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auction/6940109039e0b8b067a44cce/history",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auction",
+								"6940109039e0b8b067a44cce",
+								"history"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Dar lance Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"amount\": 6900,\r\n  \"currentVersion\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auction/694020fed6cebd593d728ba3/history",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auction",
+										"694020fed6cebd593d728ba3",
+										"history"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "98"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "54"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "216"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d8-dv4XrYAGI9PMpGbkCibCHnNrlEA\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 15 Dec 2025 15:00:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"694021de22c0fed24ed6bb01\",\n        \"auctionId\": \"694020fed6cebd593d728ba3\",\n        \"bidder\": \"Fulano\",\n        \"amount\": 110000,\n        \"versionAtBidTime\": 1,\n        \"createdAt\": \"2025-12-15T14:57:34.012Z\",\n        \"updatedAt\": \"2025-12-15T14:57:34.012Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Criar leilão",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "item",
+							"value": "Carrinho massa",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "40000",
+							"type": "text"
+						},
+						{
+							"key": "expiresAt",
+							"value": "2025-12-31T23:59:00.000Z",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "cMOUjRcxY/Gemini_Generated_Image_b9ovx8b9ovx8b9ov.png"
+						},
+						{
+							"key": "description",
+							"value": "Carro excelente",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/auction",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"auction"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Criar leilão",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "item",
+									"value": "Carrinho massa",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "40000",
+									"type": "text"
+								},
+								{
+									"key": "expiresAt",
+									"value": "2025-12-31T23:59:00.000Z",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "cMOUjRcxY/Gemini_Generated_Image_b9ovx8b9ovx8b9ov.png"
+								},
+								{
+									"key": "description",
+									"value": "Carro excelente",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auction",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auction"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "99"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "60"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "481"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1e1-lH1ySxZqckHp/gXIiBg0z6t1DXw\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 15 Dec 2025 14:53:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"owner\": \"69401448d706962525a6c26e\",\n    \"item\": {\n        \"_id\": \"694020fed6cebd593d728ba1\",\n        \"title\": \"Carrinho massa\",\n        \"description\": \"Carro excelente\",\n        \"imageUrl\": \"/uploads/1765810430444-381012142.png\",\n        \"createdAt\": \"2025-12-15T14:53:50.477Z\",\n        \"updatedAt\": \"2025-12-15T14:53:50.477Z\",\n        \"__v\": 0\n    },\n    \"price\": 40000,\n    \"highestBidder\": null,\n    \"expiresAt\": \"2025-12-31T23:59:00.000Z\",\n    \"isClosed\": false,\n    \"_id\": \"694020fed6cebd593d728ba3\",\n    \"createdAt\": \"2025-12-15T14:53:50.564Z\",\n    \"updatedAt\": \"2025-12-15T14:53:50.564Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Encerrar leilão",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/auction/694020fed6cebd593d728ba3/close",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"auction",
+						"694020fed6cebd593d728ba3",
+						"close"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Encerrar leilão",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/auction/694020fed6cebd593d728ba3/close",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auction",
+								"694020fed6cebd593d728ba3",
+								"close"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "97"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "60"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "284"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11c-rLcr7w2LeGa6lH2wKdxBqR8kVwM\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 15 Dec 2025 15:00:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"694020fed6cebd593d728ba3\",\n    \"owner\": \"69401448d706962525a6c26e\",\n    \"item\": \"694020fed6cebd593d728ba1\",\n    \"price\": 110000,\n    \"highestBidder\": \"Fulano\",\n    \"expiresAt\": \"2025-12-31T23:59:00.000Z\",\n    \"isClosed\": true,\n    \"createdAt\": \"2025-12-15T14:53:50.564Z\",\n    \"updatedAt\": \"2025-12-15T15:00:11.775Z\",\n    \"__v\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "Buscar leilões",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/auction",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"auction"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Buscar leilões",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/auction",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auction"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "10"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "9"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "60"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1683"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"693-+wL2ItxkkXQds0RzWKricgxCtPY\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 15 Dec 2025 15:00:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6940186dc59e6c7846dd8719\",\n        \"price\": 40000,\n        \"imageUrl\": \"/uploads/1765808237372-301765139.png\",\n        \"highestBidder\": null,\n        \"expiresAt\": \"2025-12-31T23:59:00.000Z\",\n        \"isClosed\": false,\n        \"createdAt\": \"2025-12-15T14:17:17.408Z\",\n        \"updatedAt\": \"2025-12-15T14:17:17.408Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"69401b309426fc03d566ad64\",\n        \"item\": {\n            \"_id\": \"69401b2f9426fc03d566ad62\",\n            \"title\": \"Ford Fusion 2012\",\n            \"description\": \"Carro excelente\",\n            \"imageUrl\": \"/uploads/1765808943915-510453144.png\",\n            \"createdAt\": \"2025-12-15T14:29:03.962Z\",\n            \"updatedAt\": \"2025-12-15T14:29:03.962Z\",\n            \"__v\": 0\n        },\n        \"price\": 40000,\n        \"highestBidder\": null,\n        \"expiresAt\": \"2025-12-31T23:59:00.000Z\",\n        \"isClosed\": false,\n        \"createdAt\": \"2025-12-15T14:29:04.072Z\",\n        \"updatedAt\": \"2025-12-15T14:29:04.072Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"69401b5cc5da4ae141247111\",\n        \"item\": {\n            \"_id\": \"69401b5cc5da4ae14124710f\",\n            \"title\": \"Ford Fusion 2012\",\n            \"description\": \"Carro excelente\",\n            \"imageUrl\": \"/uploads/1765808988290-517855171.png\",\n            \"createdAt\": \"2025-12-15T14:29:48.334Z\",\n            \"updatedAt\": \"2025-12-15T14:29:48.334Z\",\n            \"__v\": 0\n        },\n        \"price\": 110000,\n        \"highestBidder\": \"Fulano\",\n        \"expiresAt\": \"2025-12-31T23:59:00.000Z\",\n        \"isClosed\": false,\n        \"createdAt\": \"2025-12-15T14:29:48.419Z\",\n        \"updatedAt\": \"2025-12-15T14:33:22.483Z\",\n        \"__v\": 2\n    },\n    {\n        \"_id\": \"694020fed6cebd593d728ba3\",\n        \"owner\": {\n            \"_id\": \"69401448d706962525a6c26e\",\n            \"displayName\": \"Fulano\"\n        },\n        \"item\": {\n            \"_id\": \"694020fed6cebd593d728ba1\",\n            \"title\": \"Carrinho massa\",\n            \"description\": \"Carro excelente\",\n            \"imageUrl\": \"/uploads/1765810430444-381012142.png\",\n            \"createdAt\": \"2025-12-15T14:53:50.477Z\",\n            \"updatedAt\": \"2025-12-15T14:53:50.477Z\",\n            \"__v\": 0\n        },\n        \"price\": 110000,\n        \"highestBidder\": \"Fulano\",\n        \"expiresAt\": \"2025-12-31T23:59:00.000Z\",\n        \"isClosed\": true,\n        \"createdAt\": \"2025-12-15T14:53:50.564Z\",\n        \"updatedAt\": \"2025-12-15T15:00:11.775Z\",\n        \"__v\": 2\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Buscar leilão",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/auction/694020fed6cebd593d728ba3",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"auction",
+						"694020fed6cebd593d728ba3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Buscar leilão",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/auction/694020fed6cebd593d728ba3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auction",
+								"694020fed6cebd593d728ba3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "512"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"200-RVy6bBQK4YcLIuElyXTmD0GcCqE\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 15 Dec 2025 14:57:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"694020fed6cebd593d728ba3\",\n    \"owner\": {\n        \"_id\": \"69401448d706962525a6c26e\",\n        \"displayName\": \"Fulano\"\n    },\n    \"item\": {\n        \"_id\": \"694020fed6cebd593d728ba1\",\n        \"title\": \"Carrinho massa\",\n        \"description\": \"Carro excelente\",\n        \"imageUrl\": \"/uploads/1765810430444-381012142.png\",\n        \"createdAt\": \"2025-12-15T14:53:50.477Z\",\n        \"updatedAt\": \"2025-12-15T14:53:50.477Z\",\n        \"__v\": 0\n    },\n    \"price\": 40000,\n    \"highestBidder\": null,\n    \"expiresAt\": \"2025-12-31T23:59:00.000Z\",\n    \"isClosed\": false,\n    \"createdAt\": \"2025-12-15T14:53:50.564Z\",\n    \"updatedAt\": \"2025-12-15T14:53:50.564Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Buscar estado do leilão",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/auction/694020fed6cebd593d728ba3/state",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"auction",
+						"694020fed6cebd593d728ba3",
+						"state"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Buscar leilão Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/auction/694020fed6cebd593d728ba3/state",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auction",
+								"694020fed6cebd593d728ba3",
+								"state"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "137"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"89-0YdazvcdW5RzMR89jf9pEETAntk\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 15 Dec 2025 15:06:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"694020fed6cebd593d728ba3\",\n    \"price\": 110000,\n    \"highestBidder\": \"Fulano\",\n    \"expiresAt\": \"2025-12-31T23:59:00.000Z\",\n    \"isClosed\": true,\n    \"__v\": 2\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ1bGFubyIsInN1YiI6IjY5NDAxNDQ4ZDcwNjk2MjUyNWE2YzI2ZSIsImRpc3BsYXlOYW1lIjoiRnVsYW5vIiwiaWF0IjoxNzY1ODEwNzg3LCJleHAiOjE3NjU4MTQzODd9.LWMjb4-cP5saJrtO-Yv97H7X7HEhNcu1kDNAWPzvlPk",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
